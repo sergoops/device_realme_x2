@@ -160,6 +160,9 @@ PRODUCT_PACKAGES += \
 # Parts
 PRODUCT_PACKAGES += \
     RealmeParts
+    
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/parts/init/realmeparts.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/realmeparts.rc
 
 # QTI    
 PRODUCT_COPY_FILES += \
