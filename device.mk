@@ -103,7 +103,7 @@ PRODUCT_COPY_FILES += \
 
 # Spark Specific perms
 PRODUCT_COPY_FILES += \
-    vendor/spark/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    vendor/descendant/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # HIDL
 PRODUCT_PACKAGES += \

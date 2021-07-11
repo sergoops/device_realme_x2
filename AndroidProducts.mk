@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/spark_X2.mk
+    $(LOCAL_DIR)/descendant_X2.mk
 
 COMMON_LUNCH_CHOICES := \
-    spark_X2-user \
-    spark_X2-userdebug \
-    spark_X2-eng
+    descendant_X2-user \
+    descendant_X2-userdebug \
+    descendant_X2-eng
