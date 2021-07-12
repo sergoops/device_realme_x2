@@ -17,4 +17,9 @@
     <!-- Max visible notification icons -->
     <integer name="config_maxVisibleNotificationIcons">5</integer>
     <integer name="config_maxVisibleNotificationIconsWhenDark">5</integer>
+
+    <!-- How many icons may be shown at once in the system bar. Includes any
+         slots that may be reused for things like IME control. -->
+    <integer name="config_maxNotificationIcons">10</integer>
+
 </resources>
