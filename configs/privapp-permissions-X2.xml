@@ -51,6 +51,7 @@
         <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"/>
         <permission name="android.permission.CHANGE_CONFIGURATION"/>
         <permission name="lineageos.permission.MANAGE_LIVEDISPLAY"/>
+        <permission name="android.permission.MANAGE_FINGERPRINT"/>        
     </privapp-permissions>
 
     <privapp-permissions package="com.android.wallpaper">
@@ -120,5 +121,11 @@
         <permission name="android.permission.CHANGE_CONFIGURATION"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
+
+    <privapp-permissions package="com.android.customization">
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
+        <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>        
+    </privapp-permissions>       
 
 </permissions>
