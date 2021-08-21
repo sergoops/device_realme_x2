@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ssos_X2.mk
+    $(LOCAL_DIR)/conquer_X2.mk
