@@ -9,6 +9,7 @@ $(call inherit-product, device/realme/X2/device.mk)
 # Inherit some common ConquerOS stuff.
 $(call inherit-product, vendor/conquer/config/common.mk)
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USE_GAPPS := true
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
