@@ -12,6 +12,9 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
+$(shell mkdir -p $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/ && pushd $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64 > /dev/null && ln -s /system_ext/lib64/libimscamera_jni.so libimscamera_jni.so && popd > /dev/null)
+$(shell mkdir -p $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/ && pushd $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64 > /dev/null && ln -s /system_ext/lib64/libimsmedia_jni.so libimsmedia_jni.so && popd > /dev/null)
+
 # A/B builds require us to create the mount points at compile time.
 # Just creating it for all cases since it does not hurt.
 FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt

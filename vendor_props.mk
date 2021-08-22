@@ -161,6 +161,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.iwlan.enable=true \
     persist.data.iwlan.rekey=4294967295 \
     ro.telephony.default_network=22,20 \
+    telephony.lteOnCdmaDevice=1 \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.enableadvancedscan=true \
+    persist.vendor.radio.procedure_bytes=SKIP \
+    persist.vendor.radio.sib16_support=1
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    DEVICE_PROVISIONED=1 \
+    persist.vendor.cne.feature=1 \
+    persist.vendor.data.mode=concurrent \
+    persist.vendor.dpm.feature=11 \
+    ril.subscription.types=RUIM \
+    ro.telephony.default_network=33,33 \
+    ro.vendor.use_data_netmgrd=true \
     telephony.lteOnCdmaDevice=1
 
 # Sensors

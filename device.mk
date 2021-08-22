@@ -124,6 +124,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd:system/bin/hw/hostapd
 
+# Data Services
+$(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
+
+# IPACM
+$(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -178,7 +184,14 @@ PRODUCT_COPY_FILES += \
 
 # Ril
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4
+    android.hardware.radio@1.4 \
+    CellBroadcastReceiver \
+    android.hardware.radio@1.5 \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio.deprecated@1.0 \
+    libjson    
+
+ENABLE_VENDOR_RIL_SERVICE := true  
 
 # Soong namespaces
 PRODUCT_BOARD_PLATFORM := sm6150
