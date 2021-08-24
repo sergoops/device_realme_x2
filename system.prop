@@ -1,5 +1,5 @@
 # Override Display Density
-ro.sf.lcd_density=440
+ro.sf.lcd_density=480
 
 # Blurs
 ro.surface_flinger.supports_background_blur=1
