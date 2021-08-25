@@ -51,7 +51,7 @@ TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := arm-linux-gnueabi-
 TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip LD=ld.lld
 TARGET_KERNEL_SOURCE := kernel/realme/sm6150
 #TARGET_KERNEL_CONFIG := vendor/x2_defconfig
-TARGET_KERNEL_DEFCONFIG := vendor/x2_defconfig
+TARGET_KERNEL_DEFCONFIG := artemis_x2_defconfig
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
