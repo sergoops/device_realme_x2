@@ -30,6 +30,11 @@ on fs
     start boot_lc_kernel
     start boot_lc_crash
 
+    mkdir /mnt/vendor/dsp 0770 root root
+    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
+    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
+    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
+
 on late-fs
     # Boot time FS tune
     write /sys/block/dm-3/queue/read_ahead_kb 2048
