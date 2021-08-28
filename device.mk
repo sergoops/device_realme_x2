@@ -86,6 +86,10 @@ PRODUCT_PACKAGES += \
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
+# Iorap
+PRODUCT_PACKAGES += \
+    iorap-app-startup-runner
+
 # Doze
 PRODUCT_PACKAGES += \
     RealmeProximityHelper 

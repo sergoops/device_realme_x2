@@ -102,6 +102,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.front.skipdisplay.enable=1 \
     debug.hwui.renderer=skiavk
 
+# IORAP
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.iorapd.enable=true \
+    iorapd.perfetto.enable=true \
+    iorapd.readahead.enable=true
+
 #lmkd options
 PRODUCT_PRODUCT_PROPERTIES += \
 	ro.config.low_ram=false \
