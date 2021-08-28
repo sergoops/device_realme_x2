@@ -83,6 +83,9 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
+# Dex
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+
 # Doze
 PRODUCT_PACKAGES += \
     RealmeProximityHelper 
