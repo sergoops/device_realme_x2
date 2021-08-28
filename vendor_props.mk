@@ -101,7 +101,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
-    persist.front.skipdisplay.enable=1
+    persist.front.skipdisplay.enable=1 \
+    debug.hwui.renderer=skiavk
 
 #lmkd options
 PRODUCT_PRODUCT_PROPERTIES += \
