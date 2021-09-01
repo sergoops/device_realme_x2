@@ -126,11 +126,15 @@ on property:sys.boot_completed=1
 
     # Setup post-boot cpusets
     write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-5
-    write /dev/cpuset/background/cpus 0-2
-    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/foreground/cpus 0-5,7
+    write /dev/cpuset/background/cpus 4-5
+    write /dev/cpuset/system-background/cpus 2-5
     write /dev/cpuset/camera-daemon/cpus 0-7
-    write /dev/cpuset/restricted/cpus 0-3
+    write /dev/cpuset/restricted/cpus 2-5
+
+    # Enable schedutil predicted-load boosting
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl 1
+    write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/pl 1 
 
     # Setup final blkio
     # value for group_idle is us
@@ -247,3 +251,6 @@ on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,7
     setprop dalvik.vm.dex2oat-threads 6
 
+    # EAS
+    write /proc/sys/kernel/sched_upmigrate 95
+    write /proc/sys/kernel/sched_downmigrate 85 
