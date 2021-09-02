@@ -1,4 +1,5 @@
-/* Copyright (c) 2016, The Linux Foundation. All rights reserved.
+/*
+ * Copyright (c) 2019-2020 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -24,25 +25,32 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
  */
 
-#ifndef __POWERHINTPARSER__
-#define __POWERHINTPARSER__
+#ifndef ANDROID_HARDWARE_POWER_POWER_H
+#define ANDROID_HARDWARE_POWER_POWER_H
 
-#define POWERHINT_XML "/vendor/etc/powerhint.xml"
-#define MAX_HINT 6
-#define MAX_PARAM 30
+#include <aidl/android/hardware/power/BnPower.h>
+#include "power-common.h"
 
-typedef struct perflock_param_t {
-    int type;
-    int numParams;
-    int paramList[MAX_PARAM];  // static limit on number of hints - 15
-} perflock_param_t;
+namespace aidl {
+namespace android {
+namespace hardware {
+namespace power {
+namespace impl {
 
-static perflock_param_t powerhint[MAX_HINT];
+class Power : public BnPower {
+  public:
+    Power() : BnPower() { power_init(); }
+    ndk::ScopedAStatus setMode(Mode type, bool enabled) override;
+    ndk::ScopedAStatus isModeSupported(Mode type, bool* _aidl_return) override;
+    ndk::ScopedAStatus setBoost(Boost type, int32_t durationMs) override;
+    ndk::ScopedAStatus isBoostSupported(Boost type, bool* _aidl_return) override;
+};
 
-int parsePowerhintXML();
-int* getPowerhint(int, int*);
-
-#endif /* __POWERHINTPARSER__ */
+}  // namespace impl
+}  // namespace power
+}  // namespace hardware
+}  // namespace android
+}  // namespace aidl
+#endif  // ANDROID_HARDWARE_POWER_POWER_H
