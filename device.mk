@@ -88,10 +88,7 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
 # Doze
 PRODUCT_PACKAGES += \
-    RealmeProximityHelper 
-    
-# RealmeParts
-$(call inherit-product, device/realme/X2/RealmeParts/parts.mk)    
+    RealmeProximityHelper  
 
 # Fingerprint
 PRODUCT_PACKAGES += \
