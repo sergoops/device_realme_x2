@@ -88,7 +88,9 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
 # Doze
 PRODUCT_PACKAGES += \
-    RealmeProximityHelper  
+    RealmeProximityHelper \
+    RealmeDoze
+
 
 # Fingerprint
 PRODUCT_PACKAGES += \
