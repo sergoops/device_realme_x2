@@ -20,3 +20,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Override Display Density
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.lcd_density=480
+
+# Seamless transfer
+PRODUCT_PRODUCT_PROPERTIES += \
+    sys.fflag.override.settings_seamless_transfer=true
